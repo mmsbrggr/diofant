@@ -301,7 +301,7 @@ def rsolve_poly(coeffs, f, n, **hints):
 
         if E != []:
             solutions = solve(E, *C)
-            solutions = solutions[0]
+            solutions = solutions[0] if len(solutions) > 0 else {}
         else:
             solutions = {}
 
